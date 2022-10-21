@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+        }
+        body{
+            background: url('https://wallpaperaccess.com/full/202976.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            height: 200vh;
+
+        }
+       
+        #current_info{
+            display: flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+        }
+
+       .date-container{
+        padding-left: 30px;
+        font-size: 70px;
+        font-weight: 100;
+       }
+       .date-container #am-pm{
+        font-size: 30px;
+        margin-left: 20px;
+       }
+       .date-container #date{
+        font-size:30px;
+       }
+       .place-container .time-zone{
+        font-size: 30px;
+        font-weight: 700;
+        padding-right: 22px;
+       }
+       .place-container .country{
+        font-size: 12px;
+        font-weight: 700;
+       }
+       .place-container .country{
+        font-size: 12px;
+        font-weight: 700;
+       }
+       #current_info #current-weather{
+        display: flex;
+        height: auto;
+        width: 200px;
+        background-color: rgb(137, 130, 130);
+        border: 2px solid black;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px;
+       }
+       #current-weather .weather-item{
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+       }
+       .future-forcast{
+        background-color:rgba(24,24,27,0.8);
+        padding: 25px;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        color: white;
+        width: 100%;
+
+        align-items: center;
+        justify-content: center;
+
+       }
+       .future-forcast .today{
+
+    
+        border: 2px solid red;
+        border-radius: 12px;
+        width: 200px;
+        text-align: center;
+
+       }
+       .future-forcast .today .day{
+        padding: 5px 15px;
+        background-color: #3C3C44;
+        border-radius: 50px;
+        text-align: center;
+       }
+       .future-forcast .today .temp{
+        font-size: 18px;
+        padding-top: 15px;
+       }
+       .weather-forcast{
+        display: flex;
+       }
+       .weather-forcast .weather-forcast-items{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 15px;
+       }
+       .weather-forcast .weather-forcast-items .day{
+        padding: 5px 15px;
+        background: #3C3C44;
+        border-radius: 50px;
+        text-align: center;
+       }
+       .weather-forcast .weather-forcast-items .temp{
+        font-weight: 100;
+       }
+      
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div id="current_info">
+        <div class="date-container">
+            <div id="time">
+                12:30 
+            </div>
+            <div id="date">
+                6,aug
+            </div>
+
+            <div class = "others" id="current-weather-items">
+             <div class="weather-item">
+                <div>Humidity:</div>
+                <div>95.2%</div>
+             </div>
+             <div class="weather-item">
+                <div>Pressure:</div>
+                <div>121</div>
+             </div>
+             <div class="weather-item">
+                <div>wind speed:</div>
+                <div>222</div>
+             </div>
+
+            </div>
+        </div>
+        <div class="place-container">
+           <div class="time-zone">Asia/Kolkata</div>
+           <div id = "country">In</div>
+        </div>
+      </div>
+      <div class="future-forcast">
+        <!-- for monday -->
+        <div class="today"id = "current-temp">
+            
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt=""class = "w-icon">
+                <div class="day">Monday</div>
+                <div class="temp">Night-25.6 C</div>
+                <div class="temp">Day-25.6 C</div>
+       
+          
+        </div>
+        <!-- for tuesday -->
+        <div class="weather-forcast"id ="weather-forcast" >
+            <div class="weather-forcast-items">
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt=""class = "w-icon">
+            <div class="day">Monday</div>
+            <div class="temp">Night-25.6 C</div>
+            <div class="temp">Day-25.6 C</div>
+            </div>
+
+            <div class="weather-forcast-items">
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt=""class = "w-icon">
+            <div class="day">Monday</div>
+            <div class="temp">Night-25.6 C</div>
+            <div class="temp">Day-25.6 C</div>
+            </div>
+
+            <div class="weather-forcast-items">
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt=""class = "w-icon">
+            <div class="day">Monday</div>
+            <div class="temp">Night-25.6 C</div>
+            <div class="temp">Day-25.6 C</div>
+            </div>
+
+            <div class="weather-forcast-items">
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt=""class = "w-icon">
+            <div class="day">Monday</div>
+            <div class="temp">Night-25.6 C</div>
+            <div class="temp">Day-25.6 C</div>
+            </div>
+
+            <div class="weather-forcast-items">
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt=""class = "w-icon">
+            <div class="day">Monday</div>
+            <div class="temp">Night-25.6 C</div>
+            <div class="temp">Day-25.6 C</div>
+            </div>
+            <div class="weather-forcast-items">
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt=""class = "w-icon">
+            <div class="day">Monday</div>
+            <div class="temp">Night-25.6 C</div>
+            <div class="temp">Day-25.6 C</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
